@@ -1,5 +1,7 @@
 # 3HunnaBanana - AI Content Generator
 
+![3HunnaBanana Screenshot](3hunnabanana-screenshot.png)
+
 A web application that leverages a Python Flask backend to serve a frontend that enables users to type in a prompt and get served detailed descriptions, generated images, AND videos through multiple AI services including Gemini AI, Hugging Face, and Google's Veo video generation.
 
 ## Features
