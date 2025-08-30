@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3HunnaBanana - Google AI Content Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Video Background -->
+    <video autoplay muted loop id="videoBackground">
+        <source src="{{ url_for('static', filename='3hunna-video-background.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <div class="container">
+        <header>
+            <h1>3HunnaBanana</h1>
+            <p>Google AI-Powered Content Generation</p>
+        </header>
+        
+        <main>
+            <div class="input-section">
+                <textarea 
+                    id="promptInput" 
+                    placeholder="Describe the content you want to generate..."
+                    rows="4"
+                ></textarea>
+                <button id="generateBtn" onclick="generateContent()">Generate Content</button>
+            </div>
+            
+            <div class="result-section" id="resultSection" style="display: none;">
+                <h3>Generated Result:</h3>
+                <div id="resultContent"></div>
+                <div id="loadingSpinner" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>Generating your content...</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
